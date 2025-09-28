@@ -12,6 +12,6 @@ An Android application that allows users to browse movies and book tickets onlin
     <td><img src="https://github.com/user-attachments/assets/3f2be779-8d92-4782-be47-df0125b1e194" width="300" height="750"></td>
   </tr>
   <tr>
-    <td>https://github.com/user-attachments/assets/a0fcc882-219e-4abe-ba7d-d521e058e97a</td>
+    <td><img src="https://github.com/user-attachments/assets/a0fcc882-219e-4abe-ba7d-d521e058e97a" width="300" height="750"></td>
   </tr>
 </table>
