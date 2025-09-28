@@ -2,7 +2,7 @@
 
 An Android application that allows users to browse movies and book tickets online. The app includes features like user authentication, movie listings, and detailed movie information to help users make bookings easily. Movies are fetched in real-time from the Movie Database API (TMDb), ensuring up-to-date listings.
 <ul style="list-style: none; padding-left: 0;">
-  <li">
+  <li>
     <img src="https://github.com/user-attachments/assets/cfdff683-3273-47ef-838f-4b39e5234b68" width="300" height="750">
   </li>
   <li>
