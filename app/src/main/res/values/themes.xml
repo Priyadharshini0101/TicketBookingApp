@@ -23,6 +23,7 @@
     <style name="Theme.TicketBookingApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.TicketBookingApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="Launch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/launch</item>
         <item name="colorPrimary">@color/yellow</item>

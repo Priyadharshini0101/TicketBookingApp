@@ -61,13 +61,17 @@
         android:id="@+id/gridMovieActivity"
         android:name="com.mycode.ticketbookingapp.homefragment.gridview.GridViewActivity"
         android:label="Gridmovie"
-        tools:layout="@layout/activity_grid_view" >
-   </activity>
+        tools:layout="@layout/activity_grid_view"></activity>
 
     <activity
         android:id="@+id/moviediscActivity"
         android:name="com.mycode.ticketbookingapp.homefragment.moviedescription.MovieDescriptionActivity"
         android:label="MovieDescription"
-        tools:layout="@layout/activity_movie_description" >
-      </activity>
+        tools:layout="@layout/activity_movie_description"></activity>
+
+    <activity
+        android:id="@+id/bookingTicketPage1Activity"
+        android:name="com.mycode.ticketbookingapp.homefragment.bookingticketpage1.BookingTicketPage1Activity"
+        android:label="BookingTicketPage1Activity"
+        tools:layout="@layout/activity_booking_ticket_page1"></activity>
 </navigation>

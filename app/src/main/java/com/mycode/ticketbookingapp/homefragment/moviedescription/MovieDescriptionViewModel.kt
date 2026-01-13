@@ -1,18 +1,18 @@
 package com.mycode.ticketbookingapp.homefragment.moviedescription
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.mycode.ticketbookingapp.network.*
+import com.mycode.ticketbookingapp.network.MovieDetails
+import com.mycode.ticketbookingapp.network.TMBDApi
+import com.mycode.ticketbookingapp.network.TMBDConstants
+import com.mycode.ticketbookingapp.network.genres
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import retrofit2.await
-import java.util.stream.Collectors
-import kotlin.system.exitProcess
 
 class MovieDescriptionViewModel(id: String):ViewModel() {
     private val _selectedProperty = MutableLiveData<MovieDetails>()
@@ -28,11 +28,29 @@ class MovieDescriptionViewModel(id: String):ViewModel() {
 
     val selectedvid: LiveData<String>
         get() = _selectedvid
+    private val _navigateToBookingTicketPage1 = MutableLiveData<Boolean>()
+    val navigateToBookingTicketPage1: LiveData<Boolean>
+        get() = _navigateToBookingTicketPage1
+
+    fun navigateToBookingTicketPage1() {
+        _navigateToBookingTicketPage1.value = true
+    }
 
 
     var viewModelJob = Job()
     val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
-    var months:List<String> = listOf("January", "February", "May",	"June", "July",	"August", "September", "October", "November", "December")
+    var months: List<String> = listOf(
+        "January",
+        "February",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    )
 
     init {
         getMovieDetails(id)

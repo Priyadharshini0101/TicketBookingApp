@@ -9,13 +9,9 @@
             type="com.mycode.ticketbookingapp.homefragment.moviedescription.MovieDescriptionViewModel" />
     </data>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/left_well"
@@ -165,6 +161,18 @@
                         app:layout_constraintEnd_toEndOf="@id/right_well"
                         app:layout_constraintStart_toStartOf="@id/left_well"
                         tools:text="Overview" />
+
+            <Button
+                android:id="@+id/book_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:onClick="@{() -> movieDescriptionViewModel.navigateToBookingTicketPage1()}"
+                android:text="@string/book_tickets"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <ProgressBar
                 android:id="@+id/loading_spinnerM"
                 android:visibility="visible"
@@ -179,5 +187,5 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+
 </layout>

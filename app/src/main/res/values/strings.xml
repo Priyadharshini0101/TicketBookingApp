@@ -56,4 +56,6 @@
     <string name="dd_mm_yy">DD/MM/YY</string>
     <string name="gender">Gender</string>
     <string name="save_changes">Save changes</string>
+    <string name="book_tickets">Book Tickets</string>
+    <string name="title_activity_booking_ticket_page1">BookingTicketPage1Activity</string>
 </resources>

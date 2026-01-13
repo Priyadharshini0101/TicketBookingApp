@@ -13,12 +13,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.SnapHelper
 import com.mycode.ticketbookingapp.R
 import com.mycode.ticketbookingapp.databinding.FragmentHomeBinding
 import com.mycode.ticketbookingapp.network.TMBDConstants
 import com.mycode.ticketbookingapp.signup.SignUpFragment
 import com.mycode.ticketbookingapp.welcome.WelcomeFragmentDirections
 import com.mycode.ticketbookingapp.welcome.WelcomeViewModel
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment() {
@@ -38,9 +41,10 @@ class HomeFragment : Fragment() {
 
         binding.lifecycleOwner=this
 
+
         val homeRecyclerViewAdapter=HomeRecyclerViewAdapter()
 
-    binding.homeRecyclerView.adapter=homeRecyclerViewAdapter
+        binding.homeRecyclerView.adapter = homeRecyclerViewAdapter
 
         homeViewModel.homeFeed.observe(viewLifecycleOwner, Observer{
             it?.let{

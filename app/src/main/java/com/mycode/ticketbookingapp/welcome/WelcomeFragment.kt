@@ -41,14 +41,13 @@ class WelcomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-    val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(inflater,
-        R.layout.fragment_welcome,container,false)
+    val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome,container,false)
         (activity as AppCompatActivity).supportActionBar?.hide()
         val application = requireNotNull(this.activity).application
         val viewModelFactory= WelcomeViewModelFactory(application)
-        welcomeViewModel = ViewModelProvider(this,viewModelFactory).get(WelcomeViewModel::class.java)
-
         val activity: Activity = requireNotNull(this.activity)
+
+        welcomeViewModel = ViewModelProvider(this,viewModelFactory).get(WelcomeViewModel::class.java)
 
         binding.welcomeViewModel=welcomeViewModel
         binding.lifecycleOwner=this
